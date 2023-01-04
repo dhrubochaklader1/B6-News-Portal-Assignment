@@ -74,7 +74,7 @@ const displayBreakingNews = (data) => {
                 <img id="second" class="rounded" src="${element.author.img
             }" class="rounded-start" alt="...">
             <h5>${element.author.published_date}</h5>
-            <i class="fas fa-eye">   ${element.total_view ? element.total_view : "no found" ? element.total_view ? element.total_view : "no found" : "no found"}</i>
+            <i class="fas fa-eye"> ${element.total_view ? element.total_view : "no found"}</i>
             <button onclick="details0('${element._id}')" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
              Details
             </button>
@@ -83,9 +83,6 @@ const displayBreakingNews = (data) => {
     </div>
     `
         store.appendChild(div)
-        // console.log(store.childElementCount > 0);
-        // total.innerText = "Total" + " " + store.childElementCount + " " + "news found";
-        // total.classList.remove("d-none");
         toggleSpinner(false)
     });
 }
@@ -146,7 +143,7 @@ const displayRegularNews = (data) => {
                 <img id="second" class="rounded" src="${element.author.img
             }" class="rounded-start" alt="...">
             <h5>${element.author.published_date}</h5>
-            <i class="fas fa-eye">   ${element.total_view ? element.total_view : "no found" ? element.total_view ? element.total_view : "no found" : "no found"}</i>
+            <i class="fas fa-eye">   ${element.total_view ? element.total_view : "no found"}</i>
             <button onclick="details1('${element._id}')" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
              Details
             </button>
