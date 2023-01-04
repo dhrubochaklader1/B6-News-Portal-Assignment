@@ -38,21 +38,10 @@ const loadAllNews = async () => {
     allNews.innerText = data.data.news_category[7].category_name;
 }
 
-document.getElementById("home").addEventListener("click", function () {
-    toggleSpinner(true);
-    const store = document.getElementById("storePoint");
-    const total = document.getElementById("total");
-    store.textContent = "";
-    const h1 = document.createElement("h1");
-    h1.innerText = "Here your favorite news channel";
-    store.appendChild(h1)
-    toggleSpinner(false);
-    total.classList.add("d-none")
-})
-
 const zeroNews = async (category_id) => {
     toggleSpinner(true)
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
+    console.log(url);
     const res = await fetch(url);
     const data = await res.json();
     displayBreakingNews(data.data);
@@ -116,6 +105,7 @@ const detailsUser0 = data => {
 const oneNews = async (category_id) => {
     toggleSpinner(true)
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
+    console.log(url);
     const res = await fetch(url);
     const data = await res.json();
     displayRegularNews(data.data);
@@ -177,6 +167,7 @@ const detailsUser1 = data => {
 const twoNews = async (category_id) => {
     toggleSpinner(true)
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
+    console.log(url);
     const res = await fetch(url);
     const data = await res.json();
     displayInternationalNews(data.data);
@@ -238,6 +229,7 @@ const detailsUser2 = data => {
 const threeNews = async (category_id) => {
     toggleSpinner(true)
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
+    console.log(url);
     const res = await fetch(url);
     const data = await res.json();
     displaySportsNews(data.data);
@@ -299,6 +291,7 @@ const detailsUser3 = data => {
 const fourNews = async (category_id) => {
     toggleSpinner(true)
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
+    console.log(url)
     const res = await fetch(url);
     const data = await res.json();
     displayEntertainmentNews(data.data);
@@ -359,8 +352,10 @@ const detailsUser4 = data => {
 }
 
 const fiveNews = async (category_id) => {
+    console.log(category_id)
     toggleSpinner(true)
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
+    console.log(url)
     const res = await fetch(url);
     const data = await res.json();
     displayCultureNews(data.data);
@@ -370,7 +365,7 @@ const displayCultureNews = (data) => {
     const store = document.getElementById("storePoint");
     const total = document.getElementById("total");
     store.textContent = "";
-    console.log(data)
+    console.log(data);
     data.forEach(element => {
         const div = document.createElement("div");
         div.classList.add("card");
@@ -424,6 +419,7 @@ const detailsUser5 = data => {
 const sixNews = async (category_id) => {
     toggleSpinner(true)
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
+    console.log(url);
     const res = await fetch(url);
     const data = await res.json();
     displayArtsNews(data.data);
@@ -486,6 +482,7 @@ const detailsUser6 = data => {
 const sevenNews = async (category_id) => {
     toggleSpinner(true)
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
+    console.log(url);
     const res = await fetch(url);
     const data = await res.json();
     displayAllNews(data.data);
