@@ -118,7 +118,7 @@ const oneNews = async (category_id) => {
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
     const res = await fetch(url);
     const data = await res.json();
-    displayBreakingNews(data.data);
+    displayRegularNews(data.data);
 }
 const displayRegularNews = (data) => {
     const store = document.getElementById("storePoint");
@@ -179,7 +179,7 @@ const twoNews = async (category_id) => {
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
     const res = await fetch(url);
     const data = await res.json();
-    displayBreakingNews(data.data);
+    displayInternationalNews(data.data);
 }
 const displayInternationalNews = (data) => {
     const store = document.getElementById("storePoint");
@@ -240,7 +240,7 @@ const threeNews = async (category_id) => {
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
     const res = await fetch(url);
     const data = await res.json();
-    displayBreakingNews(data.data);
+    displaySportsNews(data.data);
 }
 const displaySportsNews = (data) => {
     const store = document.getElementById("storePoint");
@@ -301,7 +301,7 @@ const fourNews = async (category_id) => {
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
     const res = await fetch(url);
     const data = await res.json();
-    displayBreakingNews(data.data);
+    displayEntertainmentNews(data.data);
 }
 const displayEntertainmentNews = (data) => {
     const store = document.getElementById("storePoint");
@@ -363,7 +363,8 @@ const fiveNews = async (category_id) => {
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
     const res = await fetch(url);
     const data = await res.json();
-    displayBreakingNews(data.data);
+    displayCultureNews(data.data);
+    console.log(data.data)
 }
 const displayCultureNews = (data) => {
     const store = document.getElementById("storePoint");
@@ -425,7 +426,7 @@ const sixNews = async (category_id) => {
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
     const res = await fetch(url);
     const data = await res.json();
-    displayBreakingNews(data.data);
+    displayArtsNews(data.data);
 }
 const displayArtsNews = (data) => {
     const store = document.getElementById("storePoint");
@@ -487,7 +488,7 @@ const sevenNews = async (category_id) => {
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
     const res = await fetch(url);
     const data = await res.json();
-    displayBreakingNews(data.data);
+    displayAllNews(data.data);
 }
 const displayAllNews = (data) => {
     const store = document.getElementById("storePoint");
