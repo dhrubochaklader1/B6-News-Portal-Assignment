@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin-left: 10%;
+}
+
+#newsName {
+    margin-left: 2%;
+}
+
+ul button {
+    margin-right: 7px;
+    margin-bottom: 5px;
+}
+
+article div {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+#first {
+    /* width: 100%;
+    height: 100%; */
+    padding: 10px;
+}
+
+#second {
+    width: 80px;
+    height: 70px;
+}
+
+.fas {
+    position: relative;
+    left: 50%;
+    bottom: 60px;
+}
