@@ -40,7 +40,7 @@ const loadAllNews = async () => {
 
 const zeroNews = async (category_id) => {
     toggleSpinner(true)
-    const url = `https://openapi.programming-hero.com/api/news/category/${category_i}`;
+    const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
     const res = await fetch(url);
     const data = await res.json();
     displayBreakingNews(data.data);
