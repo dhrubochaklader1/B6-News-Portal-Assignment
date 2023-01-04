@@ -74,7 +74,7 @@ const displayBreakingNews = (data) => {
                 <img id="second" class="rounded" src="${element.author.img
             }" class="rounded-start" alt="...">
             <h5>${element.author.published_date}</h5>
-            <i class="fas fa-eye">   ${element.total_view}</i>
+            <i class="fas fa-eye">   ${element.total_view ? element.total_view : "no found" ? element.total_view ? element.total_view : "no found" : "no found"}</i>
             <button onclick="details0('${element._id}')" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
              Details
             </button>
@@ -146,7 +146,7 @@ const displayRegularNews = (data) => {
                 <img id="second" class="rounded" src="${element.author.img
             }" class="rounded-start" alt="...">
             <h5>${element.author.published_date}</h5>
-            <i class="fas fa-eye">   ${element.total_view}</i>
+            <i class="fas fa-eye">   ${element.total_view ? element.total_view : "no found" ? element.total_view ? element.total_view : "no found" : "no found"}</i>
             <button onclick="details1('${element._id}')" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
              Details
             </button>
@@ -216,7 +216,7 @@ const displayInternationalNews = (data) => {
                 <img id="second" class="rounded" src="${element.author.img
             }" class="rounded-start" alt="...">
             <h5>${element.author.published_date}</h5>
-            <i class="fas fa-eye">   ${element.total_view}</i>
+            <i class="fas fa-eye">   ${element.total_view ? element.total_view : "no found"}</i>
             <button onclick="details2('${element._id}')" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
              Details
             </button>
@@ -286,7 +286,7 @@ const displaySportsNews = (data) => {
                 <img id="second" class="rounded" src="${element.author.img
             }" class="rounded-start" alt="...">
             <h5>${element.author.published_date}</h5>
-            <i class="fas fa-eye">   ${element.total_view}</i>
+            <i class="fas fa-eye">   ${element.total_view ? element.total_view : "no found"}</i>
             <button onclick="details3('${element._id}')" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
              Details
             </button>
@@ -356,7 +356,7 @@ const displayEntertainmentNews = (data) => {
                 <img id="second" class="rounded" src="${element.author.img
             }" class="rounded-start" alt="...">
             <h5>${element.author.published_date}</h5>
-            <i class="fas fa-eye">   ${element.total_view}</i>
+            <i class="fas fa-eye">   ${element.total_view ? element.total_view : "no found"}</i>
             <button onclick="details4('${element._id}')" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
              Details
             </button>
@@ -427,7 +427,7 @@ const displayCultureNews = (data) => {
                 <img id="second" class="rounded" src="${element.author.img
             }" class="rounded-start" alt="...">
             <h5>${element.author.published_date}</h5>
-            <i class="fas fa-eye">   ${element.total_view}</i>
+            <i class="fas fa-eye">   ${element.total_view ? element.total_view : "no found"}</i>
             <button onclick="details5('${element._id}')" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
              Details
             </button>
@@ -496,7 +496,7 @@ const displayArtsNews = (data) => {
                 <img id="second" class="rounded" src="${element.author.img
             }" class="rounded-start" alt="...">
             <h5>${element.author.published_date}</h5>
-            <i class="fas fa-eye">   ${element.total_view}</i>
+            <i class="fas fa-eye">   ${element.total_view ? element.total_view : "no found"}</i>
             <button onclick="details6('${element._id}')" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
              Details
             </button>
@@ -567,7 +567,7 @@ const displayAllNews = (data) => {
                 <img id="second" class="rounded" src="${element.author.img
             }" class="rounded-start" alt="...">
             <h5>${element.author.published_date}</h5>
-            <i class="fas fa-eye">   ${element.total_view}</i>
+            <i class="fas fa-eye">   ${element.total_view ? element.total_view : "no found"}</i>
             <button onclick="details7('${element._id}')" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
              Details
             </button>
