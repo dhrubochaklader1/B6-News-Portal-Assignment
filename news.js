@@ -40,18 +40,25 @@ const loadAllNews = async () => {
 
 const zeroNews = async (category_id) => {
     toggleSpinner(true)
-    const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
-    console.log(url);
+    const url = `https://openapi.programming-hero.com/api/news/category/${category_i}`;
     const res = await fetch(url);
     const data = await res.json();
     displayBreakingNews(data.data);
-    console.log(data)
 }
 const displayBreakingNews = (data) => {
     const store = document.getElementById("storePoint");
     const total = document.getElementById("total");
     store.textContent = "";
-    console.log(data)
+    if (data.length > 0) {
+        total.innerText = "Total" + " " + data.length + " " + "news found";
+        total.classList.remove("d-none");
+    }
+    else {
+        total.innerText = "No news found";
+        total.classList.remove("d-none");
+        toggleSpinner(false)
+        return;
+    }
     data.forEach(element => {
         const div = document.createElement("div");
         div.classList.add("card");
@@ -76,8 +83,9 @@ const displayBreakingNews = (data) => {
     </div>
     `
         store.appendChild(div)
-        total.innerText = "Total" + " " + store.childElementCount + " " + "news found";
-        total.classList.remove("d-none");
+        // console.log(store.childElementCount > 0);
+        // total.innerText = "Total" + " " + store.childElementCount + " " + "news found";
+        // total.classList.remove("d-none");
         toggleSpinner(false)
     });
 }
@@ -105,7 +113,6 @@ const detailsUser0 = data => {
 const oneNews = async (category_id) => {
     toggleSpinner(true)
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
-    console.log(url);
     const res = await fetch(url);
     const data = await res.json();
     displayRegularNews(data.data);
@@ -114,7 +121,16 @@ const displayRegularNews = (data) => {
     const store = document.getElementById("storePoint");
     const total = document.getElementById("total");
     store.textContent = "";
-    console.log(data)
+    if (data.length > 0) {
+        total.innerText = "Total" + " " + data.length + " " + "news found";
+        total.classList.remove("d-none");
+    }
+    else {
+        total.innerText = "No news found";
+        total.classList.remove("d-none");
+        toggleSpinner(false)
+        return;
+    }
     data.forEach(element => {
         const div = document.createElement("div");
         div.classList.add("card");
@@ -139,8 +155,8 @@ const displayRegularNews = (data) => {
     </div>
     `
         store.appendChild(div)
-        total.innerText = "Total" + " " + store.childElementCount + " " + "news found";
-        total.classList.remove("d-none");
+        // total.innerText = "Total" + " " + store.childElementCount + " " + "news found";
+        // total.classList.remove("d-none");
         toggleSpinner(false)
     });
 }
@@ -167,7 +183,6 @@ const detailsUser1 = data => {
 const twoNews = async (category_id) => {
     toggleSpinner(true)
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
-    console.log(url);
     const res = await fetch(url);
     const data = await res.json();
     displayInternationalNews(data.data);
@@ -176,7 +191,16 @@ const displayInternationalNews = (data) => {
     const store = document.getElementById("storePoint");
     const total = document.getElementById("total");
     store.textContent = "";
-    console.log(data)
+    if (data.length > 0) {
+        total.innerText = "Total" + " " + data.length + " " + "news found";
+        total.classList.remove("d-none");
+    }
+    else {
+        total.innerText = "No news found";
+        total.classList.remove("d-none");
+        toggleSpinner(false)
+        return;
+    }
     data.forEach(element => {
         const div = document.createElement("div");
         div.classList.add("card");
@@ -201,8 +225,8 @@ const displayInternationalNews = (data) => {
     </div>
     `
         store.appendChild(div)
-        total.innerText = "Total" + " " + store.childElementCount + " " + "news found";
-        total.classList.remove("d-none");
+        // total.innerText = "Total" + " " + store.childElementCount + " " + "news found";
+        // total.classList.remove("d-none");
         toggleSpinner(false)
     });
 }
@@ -229,7 +253,6 @@ const detailsUser2 = data => {
 const threeNews = async (category_id) => {
     toggleSpinner(true)
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
-    console.log(url);
     const res = await fetch(url);
     const data = await res.json();
     displaySportsNews(data.data);
@@ -238,7 +261,16 @@ const displaySportsNews = (data) => {
     const store = document.getElementById("storePoint");
     const total = document.getElementById("total");
     store.textContent = "";
-    console.log(data)
+    if (data.length > 0) {
+        total.innerText = "Total" + " " + data.length + " " + "news found";
+        total.classList.remove("d-none");
+    }
+    else {
+        total.innerText = "No news found";
+        total.classList.remove("d-none");
+        toggleSpinner(false)
+        return;
+    }
     data.forEach(element => {
         const div = document.createElement("div");
         div.classList.add("card");
@@ -263,8 +295,8 @@ const displaySportsNews = (data) => {
     </div>
     `
         store.appendChild(div)
-        total.innerText = "Total" + " " + store.childElementCount + " " + "news found";
-        total.classList.remove("d-none");
+        // total.innerText = "Total" + " " + store.childElementCount + " " + "news found";
+        // total.classList.remove("d-none");
         toggleSpinner(false)
     });
 }
@@ -291,7 +323,6 @@ const detailsUser3 = data => {
 const fourNews = async (category_id) => {
     toggleSpinner(true)
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
-    console.log(url)
     const res = await fetch(url);
     const data = await res.json();
     displayEntertainmentNews(data.data);
@@ -300,7 +331,16 @@ const displayEntertainmentNews = (data) => {
     const store = document.getElementById("storePoint");
     const total = document.getElementById("total");
     store.textContent = "";
-    console.log(data)
+    if (data.length > 0) {
+        total.innerText = "Total" + " " + data.length + " " + "news found";
+        total.classList.remove("d-none");
+    }
+    else {
+        total.innerText = "No news found";
+        total.classList.remove("d-none");
+        toggleSpinner(false)
+        return;
+    }
     data.forEach(element => {
         const div = document.createElement("div");
         div.classList.add("card");
@@ -325,8 +365,8 @@ const displayEntertainmentNews = (data) => {
     </div>
     `
         store.appendChild(div)
-        total.innerText = "Total" + " " + store.childElementCount + " " + "news found";
-        total.classList.remove("d-none");
+        // total.innerText = "Total" + " " + store.childElementCount + " " + "news found";
+        // total.classList.remove("d-none");
         toggleSpinner(false)
     });
 }
@@ -352,20 +392,26 @@ const detailsUser4 = data => {
 }
 
 const fiveNews = async (category_id) => {
-    console.log(category_id)
     toggleSpinner(true)
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
-    console.log(url)
     const res = await fetch(url);
     const data = await res.json();
     displayCultureNews(data.data);
-    console.log(data.data)
 }
 const displayCultureNews = (data) => {
     const store = document.getElementById("storePoint");
     const total = document.getElementById("total");
     store.textContent = "";
-    console.log(data);
+    if (data.length > 0) {
+        total.innerText = "Total" + " " + data.length + " " + "news found";
+        total.classList.remove("d-none");
+    }
+    else {
+        total.innerText = "No news found";
+        total.classList.remove("d-none");
+        toggleSpinner(false)
+        return;
+    }
     data.forEach(element => {
         const div = document.createElement("div");
         div.classList.add("card");
@@ -390,8 +436,6 @@ const displayCultureNews = (data) => {
     </div>
     `
         store.appendChild(div)
-        total.innerText = "Total" + " " + store.childElementCount + " " + "news found";
-        total.classList.remove("d-none");
         toggleSpinner(false)
     });
 }
@@ -419,7 +463,6 @@ const detailsUser5 = data => {
 const sixNews = async (category_id) => {
     toggleSpinner(true)
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
-    console.log(url);
     const res = await fetch(url);
     const data = await res.json();
     displayArtsNews(data.data);
@@ -428,7 +471,16 @@ const displayArtsNews = (data) => {
     const store = document.getElementById("storePoint");
     const total = document.getElementById("total");
     store.textContent = "";
-    console.log(data)
+    if (data.length > 0) {
+        total.innerText = "Total" + " " + data.length + " " + "news found";
+        total.classList.remove("d-none");
+    }
+    else {
+        total.innerText = "No news found";
+        total.classList.remove("d-none");
+        toggleSpinner(false)
+        return;
+    }
     data.forEach(element => {
         const div = document.createElement("div");
         div.classList.add("card");
@@ -453,8 +505,8 @@ const displayArtsNews = (data) => {
     </div>
     `
         store.appendChild(div)
-        total.innerText = "Total" + " " + store.childElementCount + " " + "news found";
-        total.classList.remove("d-none");
+        // total.innerText = "Total" + " " + store.childElementCount + " " + "news found";
+        // total.classList.remove("d-none");
         toggleSpinner(false)
     });
 }
@@ -482,7 +534,6 @@ const detailsUser6 = data => {
 const sevenNews = async (category_id) => {
     toggleSpinner(true)
     const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
-    console.log(url);
     const res = await fetch(url);
     const data = await res.json();
     displayAllNews(data.data);
@@ -491,7 +542,16 @@ const displayAllNews = (data) => {
     const store = document.getElementById("storePoint");
     const total = document.getElementById("total");
     store.textContent = "";
-    console.log(data)
+    if (data.length > 0) {
+        total.innerText = "Total" + " " + data.length + " " + "news found";
+        total.classList.remove("d-none");
+    }
+    else {
+        total.innerText = "No news found";
+        total.classList.remove("d-none");
+        toggleSpinner(false)
+        return;
+    }
     data.forEach(element => {
         const div = document.createElement("div");
         div.classList.add("card");
@@ -516,8 +576,8 @@ const displayAllNews = (data) => {
     </div>
     `
         store.appendChild(div)
-        total.innerText = "Total" + " " + store.childElementCount + " " + "news found";
-        total.classList.remove("d-none");
+        // total.innerText = "Total" + " " + store.childElementCount + " " + "news found";
+        // total.classList.remove("d-none");
         toggleSpinner(false)
     });
 }
